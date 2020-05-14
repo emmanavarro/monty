@@ -22,11 +22,11 @@ void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int)
 
 	for (i = 0; instruct_code[i].opcode != NULL; i++)
 	{
-		if (strcmp(token, instruct_code[i].opcode) == 0)
+		if (strcmp(tok, instruct_code[i].opcode) == 0)
 		{
 			return (instruct_code[i].f);
 		}
 	}
-	inv_instruction_error(token, line);
+	inv_instruction_error(tok, l);
 	return (NULL);
 }

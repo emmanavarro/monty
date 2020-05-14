@@ -11,7 +11,7 @@ int number;
 int main(int argc, char *argv[])
 {
 	FILE *fp = NULL;
-	char str[MAXCHAR];
+	char str[1000];
 	char *filename = argv[1], *line = NULL, *token = NULL;
 	unsigned int line_number = 1;
 	void (*funct)(stack_t **stack, unsigned int line_number);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (fp == NULL)
 		open_error(argv);
 
-	while ((line = fgets(str, MAXCHAR, fp)) != NULL)
+	while ((line = fgets(str, 1000, fp)) != NULL)
 	{
 		token = strtok(line, " \t\n\r");
 		if (token == NULL)

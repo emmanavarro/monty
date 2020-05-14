@@ -1,8 +1,6 @@
 #ifndef _MONTY_H_
 #define _MONTY_H_
 
-#define MAXCHAR 1000
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
