@@ -14,7 +14,7 @@ void _push_stack(stack_t **top, unsigned int line_number)
 
 	(void) line_number;
 	new = malloc(sizeof(stack_t));
-	
+
 	if (new == NULL)
 		malloc_error();
 

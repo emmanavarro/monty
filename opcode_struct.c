@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
  * get_op_code - contain the function that will perform the operation
- * @token: operation code
- * @line: line readed
+ * @tok: operation code
+ * @l: line readed
  * Return: void
  */
-void (*get_op_code(char *token, unsigned int line)) (stack_t **stack, unsigned int line_number)
+void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int)
 {
 	int i;
 

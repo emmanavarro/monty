@@ -50,7 +50,7 @@ void _add(stack_t **top, unsigned int line_number);
 void _nop(stack_t **top, unsigned int line_number);
 
 
-void (*get_op_code(char *token, unsigned int line)) (stack_t **stack, unsigned int line_number);
+void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int);
 
 void malloc_error(void);
 void arguments_error(void);
