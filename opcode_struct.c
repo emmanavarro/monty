@@ -16,6 +16,10 @@ void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int)
 		{"swap", _swap},
 		{"nop", _nop},
 		{"add", _add},
+		{"sub", _sub},
+		{"div", _div},
+		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 	for (i = 0; instruct_code[i].opcode != NULL; i++)

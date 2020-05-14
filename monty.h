@@ -36,6 +36,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int);
+void execute_opcode(char **argv);
 
 void _push_stack(stack_t **top, unsigned int line_number);
 void _pall_stack(stack_t **top, unsigned int line_number);
@@ -45,21 +47,25 @@ void _pop_stack(stack_t **top, unsigned int line_number);
 void _swap(stack_t **top, unsigned int line_number);
 void _add(stack_t **top, unsigned int line_number);
 void _nop(stack_t **top, unsigned int line_number);
-
-
-void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int);
-void execute_opcode(char **argv);
+void _sub(stack_t **top, unsigned int line_number);
+void _div(stack_t **top, unsigned int line_number);
+void _mul(stack_t **top, unsigned int line_number);
+void _mod(stack_t **top, unsigned int line_number);
 
 void malloc_error(void);
 void arguments_error(void);
 void open_error(char **argv);
 void inv_instruction_error(char *instruction, unsigned int line);
 void not_int_error(unsigned int line);
-
 void pint_error(unsigned int line);
 void pop_error(unsigned int line);
 void swap_error(unsigned int line);
 void add_error(unsigned int line);
+void sub_error(unsigned int line);
+void div_error(unsigned int line);
+void div2_error(unsigned int line);
+void mul_error(unsigned int line);
+void mod_error(unsigned int line);
 
 int is_number(char *token);
 int is_hash(char *token, int line_count);
