@@ -21,10 +21,16 @@ void execute_opcode(char **argv)
 	{
 		token = strtok(buff, " \t\n\r");
 		if (token == NULL)
+		{
+			line_number += 1;
 			continue;
+		}
 		strcpy(str, token);
 		if (is_hash(token, line_number) == 1)
+		{
+			line_number += 1;
 			continue;
+		}
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, " \t\n\r");
