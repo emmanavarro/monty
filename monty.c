@@ -37,18 +37,13 @@ void execute_opcode(char **argv)
 			if (token == NULL || is_number(token) == -1)
 				not_int_error(line_number);
 			number = atoi(token);
-			funct = get_op_code(str, line_number);
-			funct(&top, line_number);
+			funct = get_op_code(str, line_number), funct(&top, line_number);
 		}
 		else
 		{
-			funct = get_op_code(token, line_number);
-			funct(&top, line_number);
+			funct = get_op_code(token, line_number), funct(&top, line_number);
 		}
 		line_number++;
 	}
 	fclose(fp);
-	if (buff != NULL)
-		free(buff);
-	_free_stack(top);
 }
