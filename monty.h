@@ -63,5 +63,6 @@ void add_error(unsigned int line);
 void sub_error(unsigned int line);
 
 int is_number(char *token);
+int is_hash(char *token, int line_count);
 
 #endif

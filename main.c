@@ -30,6 +30,8 @@ int main(int argc, char *argv[])
 		if (token == NULL)
 			continue;
 		strcpy(str, token);
+		if (is_hash(token, line_number) == 1)
+			continue;
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, " \t\n\r");

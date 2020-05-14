@@ -70,3 +70,19 @@ int is_number(char *token)
 	}
 	return (1);
 }
+
+/**
+* is_hash - check is the received string is #
+* @token: string
+* @line_count: line
+* Return: -1 if isn't # or 1
+*/
+int is_hash(char *token, int line_count)
+{
+	if (token == NULL || token[0] == '#')
+	{
+		line_count++;
+		return (1);
+	}
+	return (-1);
+}
