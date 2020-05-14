@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * main - main of the program.
  * @argv: arguments

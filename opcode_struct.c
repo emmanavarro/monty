@@ -8,7 +8,6 @@
 void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int)
 {
 	int i;
-
 	instruction_t instruct_code[] = {
 		{"push", _push_stack},
 		{"pall", _pall_stack},
@@ -19,7 +18,6 @@ void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int)
 		{"add", _add},
 		{NULL, NULL}
 	};
-
 	for (i = 0; instruct_code[i].opcode != NULL; i++)
 	{
 		if (strcmp(tok, instruct_code[i].opcode) == 0)

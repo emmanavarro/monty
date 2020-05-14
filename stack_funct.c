@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  *_swap -main entry.
  *Description: Function that swaps the top 2 elements of stack
@@ -18,7 +17,6 @@ void _swap(stack_t **top, unsigned int line_number)
 	(*top)->n = (*top)->next->n;
 	(*top)->next->n = num;
 }
-
 /**
  *_add -main entry.
  *Description: Function that adds the top two elements of the stack
@@ -37,7 +35,6 @@ void _add(stack_t **top, unsigned int line_number)
 	tmp->n += (*top)->n;
 	_pop_stack(top, line_number);
 }
-
 /**
  * _nop - main entry.
  * Description: Doesn't do anything
@@ -50,7 +47,6 @@ void _nop(stack_t **top, unsigned int line_number)
 	(void) top;
 	(void) line_number;
 }
-
 /**
  * is_number - check if string received is int or not
  * @token: string to check
@@ -70,7 +66,6 @@ int is_number(char *token)
 	}
 	return (1);
 }
-
 /**
 * is_hash - check is the received string is #
 * @token: string
