@@ -49,6 +49,7 @@ void _nop(stack_t **top, unsigned int line_number);
 
 
 void (*get_op_code(char *tok, unsigned int l)) (stack_t **stack, unsigned int);
+void execute_opcode(char **argv);
 
 void malloc_error(void);
 void arguments_error(void);
