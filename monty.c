@@ -8,20 +8,20 @@ int number;
 
 void execute_opcode(char **argv)
 {
-	FILE *fp = NULL;
-	char str[1000];
-	char *filename = argv[1], *line = NULL, *token = NULL;
+	FILE *fp;
+	char str[1000], *buff = NULL, *token = NULL;
 	unsigned int line_number = 1;
+	ssize_t line_size;
+	size_t len = 0;
 	void (*funct)(stack_t **stack, unsigned int line_number);
 	stack_t *top = NULL;
 
-	fp = fopen(filename, "r");
+	fp = fopen(argv[1], "r");
 	if (fp == NULL)
 		open_error(argv);
-
-	while ((line = fgets(str, 1000, fp)) != NULL)
+	while ((line_size = getline(&buff, &len, fp)) != EOF)
 	{
-		token = strtok(line, " \t\n\r");
+		token = strtok(buff, " \t\n\r");
 		if (token == NULL)
 			continue;
 		strcpy(str, token);
@@ -43,6 +43,8 @@ void execute_opcode(char **argv)
 		}
 		line_number++;
 	}
-	_free_stack(top);
 	fclose(fp);
+	if (buff != NULL)
+		free(buff);
+	_free_stack(top);
 }
