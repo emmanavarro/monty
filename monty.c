@@ -1,11 +1,9 @@
 #include "monty.h"
 int number;
-
 /**
  * execute_opcode - read, open and execute.
  * @argv: arguments
  */
-
 void execute_opcode(char **argv)
 {
 	FILE *fp;
