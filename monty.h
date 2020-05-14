@@ -51,6 +51,8 @@ void _sub(stack_t **top, unsigned int line_number);
 void _div(stack_t **top, unsigned int line_number);
 void _mul(stack_t **top, unsigned int line_number);
 void _mod(stack_t **top, unsigned int line_number);
+void _pchar(stack_t **top, unsigned int line_number);
+void _pstr(stack_t **top, unsigned int line_number);
 
 void malloc_error(void);
 void arguments_error(void);
@@ -66,6 +68,8 @@ void div_error(unsigned int line);
 void div2_error(unsigned int line);
 void mul_error(unsigned int line);
 void mod_error(unsigned int line);
+void pchar_error(unsigned int line);
+void pchar2_error(unsigned int line);
 
 int is_number(char *token);
 int is_hash(char *token, int line_count);
