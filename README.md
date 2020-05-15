@@ -1,4 +1,5 @@
-![Monty](https://user-images.githubusercontent.com/54350108/82009371-bf4a3a00-9634-11ea-9a16-bf701dedee22.png =1024x391)
+<img src="https://user-images.githubusercontent.com/54350108/82009371-bf4a3a00-9634-11ea-9a16-bf701dedee22.png" width="1024" height="415" />
+
 # 0x19. C - Stacks, Queues - LIFO, FIFO
 ## Objectives
 ### General
