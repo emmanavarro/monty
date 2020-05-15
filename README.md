@@ -1,3 +1,4 @@
+https://user-images.githubusercontent.com/54350108/82009046-e2c0b500-9633-11ea-81db-65968ceab604.jpg
 # 0x19. C - Stacks, Queues - LIFO, FIFO
 ## Objectives
 ### General
